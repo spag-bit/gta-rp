@@ -14,14 +14,14 @@ npm run preview  # preview the production build
 
 ## Change the video — local file in the assets folder
 
-1. Drop your video into `public/assets/` (e.g. `public/assets/transmission.mp4`).
+1. Drop your video into `public/assets/` (e.g. `public/assets/video.mp4`).
 2. Point `VIDEO_SRC` at it in `src/App.jsx` (top of file):
 
 ```js
-const VIDEO_SRC = '/assets/transmission.mp4'  // your local video
+const VIDEO_SRC = '/assets/video.mp4'  // your local video
 const POSTER_SRC = ''                          // optional: '/assets/poster.jpg'
 ```
 
 Anything inside `public/` is served from the site root, so
-`public/assets/transmission.mp4` is referenced as `/assets/transmission.mp4`.
+`public/assets/video.mp4` is referenced as `/assets/video.mp4`.
 Use `.mp4` (H.264 + AAC) for the widest browser support.
