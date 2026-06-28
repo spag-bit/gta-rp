@@ -51,9 +51,9 @@ export default function App() {
       <main className="shell">
         <header className="hero">
           <div className="mask" aria-hidden="true">𝅓</div>
-          <h1 className="glitch" data-text="ANONYMOUS">ANONYMOUS</h1>
+          <h1 className="glitch" data-text="SPECTATORS">SPCTTRS</h1>
           <p className="tagline">
-            We are Anonymous. We are Legion. We do not forgive. We do not forget.
+            We Spectate, We leave no trace. Information belongs to everyone.
           </p>
           <ul className="boot">
             {BOOT_LINES.map((l) => (
@@ -86,10 +86,15 @@ export default function App() {
         </section>
 
         <section className="manifesto">
-          <h2>// MANIFESTO</h2>
+          <h2>// Message</h2>
           <p>
-            Information wants to be free. Knowledge is power, and power belongs to
-            no single hand. This signal is broadcast to anyone listening in the dark.
+           "Touch a worker, and you invite the ghosts into your house.
+            Consider this your first and only warning. Go after the banks, fight the cops, kill each other over your drugs—but leave the civilians out of it.
+            The next time you pull a citizen out of their truck to hold them at gunpoint, look closely at the shadows."
+          </p>
+          <h2>// Warning</h2>
+          <p>
+           "We know your names. We know your frequencies. We watch from the rooftops, the hills, and the blind spots of your territory. While you are planning your next stick-up, we are already recording. Your operations are entirely transparent to us."
           </p>
           <div className="grid">
             <div className="card"><span className="k">01</span><p>Stay anonymous.</p></div>
