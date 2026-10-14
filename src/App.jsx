@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import MatrixRain from './MatrixRain.jsx'
 
-const VIDEO_SRC = '/asset/video.mp4'
+const VIDEO_SRC = 'https://www.youtube.com/watch?v=Aq5WXmQQooo'
 
 const BOOT_LINES = [
   '> detecting poor life choices...',
@@ -35,6 +35,15 @@ function Typewriter({ text, speed = 42, className }) {
 export default function App() {
   const [booted, setBooted] = useState(false)
   const [muted, setMuted] = useState(true)
+
+  useEffect(() => {
+    const iframe = document.querySelector('iframe[src*="youtube.com"]')
+    if (iframe) {
+      iframe.src = muted
+        ? 'https://www.youtube.com/embed/Aq5WXmQQooo?autoplay=1&mute=1&loop=1&playlist=Aq5WXmQQooo&controls=0&modestbranding=1'
+        : 'https://www.youtube.com/embed/Aq5WXmQQooo?autoplay=1&loop=1&playlist=Aq5WXmQQooo&controls=0&modestbranding=1'
+    }
+  }, [muted])
 
   useEffect(() => {
     const t = setTimeout(() => setBooted(true), 1200)
@@ -86,18 +95,12 @@ export default function App() {
           </div>
 
           <div className="video troll-video">
-            <video
-              src={VIDEO_SRC}
-              autoPlay
-              loop
-              muted={muted}
-              playsInline
-              preload="auto"
-              controls={false}
-              onEnded={(event) => event.currentTarget.play()}
-            >
-              Your browser does not support the video tag.
-            </video>
+            <iframe
+              src="https://www.youtube.com/embed/Aq5WXmQQooo?autoplay=1&mute=1&loop=1&playlist=Aq5WXmQQooo&controls=0&modestbranding=1"
+              title="Rickroll video"
+              allow="autoplay; encrypted-media; picture-in-picture"
+              allowFullScreen
+            />
             <div className="video-overlay">
               <span>YOU HAVE BEEN RICKROLLED</span>
             </div>
